@@ -1,23 +1,20 @@
-"use strict";
-const robot = {
-    _energyLevel: 100,
-    recharge(){
-      this._energyLevel += 30;
-      console.log(`Recharged! Energy is currently at ${this._energyLevel}%.`);
-    }
-  };
-  robot.recharge();
+'use strict';
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+// 2
+const personalMovieDB ={
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+// 3
+const   a = prompt('Один из последних просмотренных фильмов?', ''),  
+        b = +prompt('На сколько оцените его?', ''),
+        c = prompt('Один из последних просмотренных фильмов?', ''), 
+        d = +prompt('На сколько оцените его?', ''); 
 
-//   const result = confirm('Are you');
-//   console.log(result);
- 
-// const answer = +prompt("dfdf?", "");
-//  console.log(answer+ 5);
+personalMovieDB.movies [a] = b;
+personalMovieDB.movies [c] = d; 
 
-const answers = [];
-
-answers[0] = prompt('What is your name?', '');
-answers[1] = prompt('What is your surname?', '');
-answers[2] = prompt('How old are yoy?', '');
-
-console.log(typeof(answers));
+console.log(personalMovieDB);
